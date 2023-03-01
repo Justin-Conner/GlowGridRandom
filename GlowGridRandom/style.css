@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#grid {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+}
+
+.square {
+	width: 48px;
+	height: 48px;
+	background-color: black;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-image: black;
+	background-origin: border-box;
+	background-clip: border-box;
+	transition: background-color 0.5s;
+border: none;
+}
+
+.square.glowing {
+	background-color: rgba(0, 255, 0, 0.5);
+border: none;
+}
+
