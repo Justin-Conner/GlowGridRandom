@@ -1,0 +1,10 @@
+getRandomInt(max):
+This function takes a single argument, max, which represents the maximum integer value that can be returned. The function uses the built-in Math.random() function to generate a random floating-point number between 0 and 1, then multiplies that number by max and uses Math.floor() to round the result down to the nearest integer. The result is a random integer between 0 and max, which is then returned.
+
+getRandomPositions(length):
+This function takes a single argument, length, which represents the length of the array of positions that will be returned. The function initializes an empty array called positions and enters a loop that will continue until positions has half as many elements as length. Inside the loop, the function generates a random integer between 0 and length using Math.random() and Math.floor(). If the random integer is not already in positions, it is added to the array. Once the loop is complete, the function returns the positions array.
+
+The main block of code:
+This block of code starts by getting a reference to an HTML element with the ID "grid" using the document.getElementById() function. It then calculates the number of squares that can fit on the screen by dividing the width and height of the window by 48 (the width and height of each square). The for loop then iterates numSquares times, creating a new div element called square, adding the square and glowing classes to it (with a 50/50 chance of adding the glowing class using the getRandomInt() function), and appending it to the grid element using the appendChild() function.
+
+After the for loop, the code sets up an interval timer that will execute a function once every second. The function starts by getting an array of all elements with the square class using document.getElementsByClassName(). It then generates an array of random positions using the getRandomPositions() function. Finally, the function iterates over all the squares and adds the glowing class if the square's index is included in the array of random positions, or removes the class if it's not.
